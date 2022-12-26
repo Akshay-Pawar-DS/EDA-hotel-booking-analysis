@@ -141,7 +141,7 @@ Performed univariate analysis and made following conclusions:
 - total_of_special_requests: total no. of special request.
 - reservation_status: Whether a customer has checked out or canceled,or not showed 
 - reservation_status_date: Date of making reservation status. 
-- 
+
  ## Conclusion :
 - Around 60% bookings are for City hotel and 40% bookings are for Resort hotel, therefore City Hotel is busier
 than Resort hotel. Also the overall adr of City hotel is slightly higher than Resort hotel.
