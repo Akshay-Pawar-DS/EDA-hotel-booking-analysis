@@ -3,25 +3,31 @@
 ## Introduction :
   The tourism industry is one of the industries that are most affected by the Covid-19 pandemic, specifically, the hotel industry. With travel restrictions, according to research conducted by Mckinsey in 2020, the rate of hotel bookings has been deeply decreased, it makes investors of the industry very pessimistic.To deal with this, hotel owners need to operate their operations efficiently to increase revenue so they can 'survive' from this pandemic. Therefore, we will carry out Exploratory Data Analysis with the 'Hotel Booking Demand' database to find out what can be improved from a hotel operation.
 
-## Summary :
-
 ## Approach:
 
 ### Data Cleaning and Feature Engineering:
+
  (1) Removing Duplicate rows:
 
 All duplicate rows were dropped.
 
 (2) Handling null values:
+
 Null values in columns company and agent were replaced by 0.
 Null values in column country were replaced by 'others'.
 Null values in column children were replaced by the mean of the column.
+
 (3) Converting columns to appropriate data types:
+
 Changed data type of children, company, agent to int type.
 Changed data type of reservation_status_date to date type.
+
 (4) Removing outliers:
+
 One outlier was found in the adr column. Simply dropped it.
+
 (5) Creating new columns:
+
 Created new column total_stay by adding stays_in_weekend_nights+stays_in_week_nights.
 Created new column total_people by adding adults+children+babies.
 
@@ -30,40 +36,58 @@ Created new column total_people by adding adults+children+babies.
 Performed EDA and tried answering the following questions:
 
  Q1) Which agent makes the most no. of bookings?
+ 
  Q2) Which room type is in most demand and which room type generates the highest adr?
+ 
  Q3) Which meal type is the  most preffered meal of customers?
+ 
  Q4) What is the percentage of bookings in each hotel?
+ 
  Q5) Which hotel seems to make more revenue?
+ 
  Q6) Which hotel has a higher lead time?
+ 
  Q7) What is preferred stay length in each hotel?
+ 
  Q8) Which hotel has longer waiting time?
+ 
  Q9) Which hotel has higher bookings cancellation rate?
- Q10) Which hotel has high chance that its customer will return for another stay??
+ 
+ Q10) Which hotel has high chance that its customer will return for another stay?
+ 
  Q11) Which is the most common channel for booking hotels?
+ 
  Q12) Which channel is mostly used for early booking of hotels?
+ 
  Q13) Which distribution channel brings better revenue generating deals for hotels?
+ 
  Q14) Which significant distribution channel has highest cancellation percentage?
- Q15) From where the most guests are coming ? 
+ 
+ Q15) From where the most guests are coming? 
+ 
  Q16) How long do people stay at the hotels?
  
-
 Mainly performed using Matplotlib and Seaborn library and the following graph and plots had been used:
 
-Bar Plot.
-Histogram.
-Scatter Plot.
-Pie Chart.
-Line Plot.
-Heatmap.
-Box Plot
+- Bar Plot.
+- Histogram.
+- Scatter Plot.
+- Pie Chart.
+- Line Plot.
+- Heatmap.
+- Box Plot
 
 #### Univariate Analysis:
+
 Performed univariate analysis and made following conclusions:
 
- 1.) Agent no. 9 has made most no. of bookings.
- 2.) Most demanded room type is A, but better adr generating rooms H, G and C. Hotels should increase the no. of room types A and H to maximise revenue.
- 3.) Most popular meal type is BB(Bed and Breakfast).
- 4.) Around 60% bookings are for City hotel and 40% bookings are for Resort hotel, therefore City Hotel is busier than Resort hotel.
+ 1) Agent no. 9 has made most no. of bookings.
+ 
+ 2) Most demanded room type is A, but better adr generating rooms H, G and C. Hotels should increase the no. of room types A and H to maximise revenue.
+ 
+ 3) Most popular meal type is BB(Bed and Breakfast).
+ 
+ 4) Around 60% bookings are for City hotel and 40% bookings are for Resort hotel, therefore City Hotel is busier than Resort hotel.
  
  #### Bivariate Analysis:
  Performed Bivariate analysis and made following conclusions:
@@ -81,7 +105,7 @@ Performed univariate analysis and made following conclusions:
  15) Most guest are from Portugal and other Europian contries.
  16) Most people prefer to stay at the hotels of <=5 days
  
- # DataSet Used:
+ ## DataSet Used:
  We are given a hotel bookings dataset. This dataset contains booking information for a city hotel and a resort hotel. It contains the following features.
 
 - hotel: Name of hotel ( City or Resort)
@@ -118,7 +142,7 @@ Performed univariate analysis and made following conclusions:
 - reservation_status: Whether a customer has checked out or canceled,or not showed 
 - reservation_status_date: Date of making reservation status. 
 - 
- # Conclusion :
+ ## Conclusion :
 - Around 60% bookings are for City hotel and 40% bookings are for Resort hotel, therefore City Hotel is busier
 than Resort hotel. Also the overall adr of City hotel is slightly higher than Resort hotel.
 - Mostly guests stay for less than 5 days in hotel and for longer stays Resort hotel is preferred.
